@@ -1,0 +1,24 @@
+﻿
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+.next/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Firebase
+firebase-service-account.json
+**/firebase-service-account.json
+
+# OS
+.DS_Store
+Thumbs.db
+

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-aura-50: #f5f3ff;
+  --color-aura-100: #ede9fe;
+  --color-aura-500: #8b5cf6;
+  --color-aura-600: #7c3aed;
+  --color-aura-900: #4c1d95;
+  --color-aura-950: #2e1065;
+  
+  --color-bg-dark: #0f0a19;
+  --color-card-dark: rgba(30, 20, 50, 0.4);
+  --color-card-border: rgba(139, 92, 246, 0.2);
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+.glass-card {
+  background-color: var(--color-card-dark);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-card-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #a78bfa, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
