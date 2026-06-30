@@ -29,6 +29,26 @@ This is the backend for Aura, built with FastAPI. It follows a modular architect
 5. **Access the API Docs**:
    Navigate to `http://localhost:8000/docs` in your browser.
 
+## Database Migrations (Alembic)
+The project uses SQLAlchemy and Alembic for database management. Supabase PostgreSQL is the intended host.
+
+**To initialize the database:**
+1. Configure `DATABASE_URL` in your `.env` file (e.g., `postgresql+psycopg://postgres:[PASSWORD]@db.[PROJECT_REF].supabase.co:5432/postgres`).
+2. Run migrations to upgrade the schema:
+   ```bash
+   alembic upgrade head
+   ```
+
+**To generate a new migration after modifying models:**
+```bash
+alembic revision --autogenerate -m "description_of_changes"
+```
+
+**To rollback the last migration:**
+```bash
+alembic downgrade -1
+```
+
 ## Firebase Authentication
 
 The authentication module relies on the official Firebase Admin SDK.

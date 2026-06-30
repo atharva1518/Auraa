@@ -30,6 +30,8 @@ app.add_middleware(
 
 # Exception Handlers
 app.add_exception_handler(AuthException, auth_exception_handler)
+from app.core.exceptions import DatabaseException, database_exception_handler
+app.add_exception_handler(DatabaseException, database_exception_handler)
 app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(StarletteHTTPException, http_exception_handler)
 app.add_exception_handler(Exception, generic_exception_handler)
